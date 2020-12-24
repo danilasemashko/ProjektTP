@@ -1,0 +1,442 @@
+html { 
+    overflow:  hidden; 
+}
+#toast-container{
+   position: absolute;
+   left: 80%;
+   top: 10%;
+   
+}
+.logOut {
+   width: 12%;
+   text-align: center;
+   line-height: 70px;
+   font-size: 20px;
+ 
+}
+
+.mainDiv {
+ font-family: 'Quicksand', sans-serif;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ justify-content: space-around;
+ width: 100vw;
+ height: 100vh;
+ background-size: 100%;
+ background-image:  url("assets/images/background.jpg");  
+
+}
+
+.navBar{
+   width: 80%;
+   height: 10%;
+   display: flex;
+   justify-content: space-between;
+}
+
+.course{
+   width: 35%;
+   height: 50%;
+   background-color: white;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+.logo{
+   width: 25%;
+   height: 100%;
+   background-size: 95%;
+   background-position: center;
+   background-image:  url("assets/images/logo.png") ;
+}
+
+.time{
+   width: 50%;
+   height: 100%;
+   display: flex;
+   justify-content: space-around;
+}
+.time2{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   font-size: 3rem;
+}
+
+.info span {
+   display: inline-block;
+   color: black;
+   line-height: 1;
+   text-decoration: none;
+   cursor: pointer;
+}
+.info span:after {
+   background-color: rgb(79, 194, 240);
+   display: block;
+   content: "";
+   height: 3px;
+   width: 0%;
+   -webkit-transition: width .3s ease-in-out;
+   -moz--transition: width .3s ease-in-out;
+   transition: width .3s ease-in-out;
+}
+.info span:hover:after,
+.info span:focus:after {
+   width: 100%;
+}
+
+.valuta{
+   width: 30%;
+   height: 100%;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+.buy{
+   width: 30%;
+   height: 100%;
+   flex-direction: column;
+   align-items: center;
+}
+.sell{
+   width: 30%;
+   height: 100%;
+   flex-direction: column;
+   align-items: center;
+}
+#headerCourse{
+   width: 100%;
+   height: 15%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   font-size: 1rem;
+}
+.mainCourse{
+   height: 85%;
+   width: 90%;
+   display: flex;
+   justify-content: space-between;
+}
+.valuta1{
+   width: 100%;
+   height: 20%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+.usd{
+   width: 100%;
+   height: 20%;
+   display: flex;
+   align-items: center;
+   justify-content: flex-start;
+}
+.usdImage{
+   width: 20%;
+   height: 50%;
+   border-radius: 50%;
+   background-size: 100%;
+   background-image: url(assets/images/usd.jpg);
+}
+.eur{
+   width: 100%;
+   height: 20%;
+   display: flex;
+   align-items: center;
+   justify-content: flex-start;
+}
+.eurImage{
+   width: 20%;
+   height: 45%;
+   border-radius: 50%;
+   background-size: 100%;
+   background-image: url(assets/images/eur.jpg);
+}
+.rub{
+   width: 100%;
+   height: 20%;
+   display: flex;
+   align-items: center;
+   justify-content: flex-start;
+}
+.rubImage{
+   width: 20%;
+   height: 50%;
+   border-radius: 50%;
+   background-size: 100%;
+   background-image: url(assets/images/rub.jpg);
+}
+.pln{
+   width: 100%;
+   height: 20%;
+   display: flex;
+   align-items: center;
+   justify-content: flex-start;
+}
+.plnImage{
+   width: 20%;
+   height: 50%;
+   border-radius: 50%;
+   background-size: 100%;
+   background-image: url(assets/images/pln.jpg);
+}
+.buyText{
+   width: 100%;
+   height: 20%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+.sellText{
+   width: 100%;
+   height: 20%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+.usdBuy{
+   width: 100%;
+   height: 20%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+.eurBuy{
+   width: 100%;
+   height: 20%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+.rubBuy{
+   width: 100%;
+   height: 20%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+.plnBuy{
+   width: 100%;
+   height: 20%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+.usdSell{
+   width: 100%;
+   height: 20%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+.eurSell{
+   width: 100%;
+   height: 20%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+.rubSell{
+   width: 100%;
+   height: 20%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+.plnSell{
+   width: 100%;
+   height: 20%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.calc{
+   height: 20%;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-around;
+   width: 35%;
+   background-color: white;
+   box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+.calcText{
+   width: 100%;
+   height: 30%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+.calcInp{
+   width: 100%;
+   height: 25%;
+   display: flex;
+   align-items: center;
+   justify-content: space-around;
+}
+.inp1{
+   width: 40%;
+   height: 100%;
+   display: flex;
+   flex-direction: row;
+   background-color: red;
+}
+.inp2{
+   width: 40%;
+   height: 100%;
+   display: flex;
+   
+   align-items: center;
+}
+.vibor{
+   height: 100%;
+}
+.vibor2{
+   height: 100%;
+}
+.inpVal1{
+   width: 100%
+}
+#inpVal2{
+   /* display: flex; */
+   /* align-items: center; */
+   /* justify-content: flex-end; */
+   width:80%;
+   height:93%;
+   text-align: center;
+   /* border:1px solid; */
+}
+.calcBut{
+   width: 100%;
+   height: 25%;
+   display: flex;
+   align-items: center;
+   justify-content: space-around;
+}
+
+.but1{
+   height: 100%;
+   width: 30%;
+}
+.but2{
+   height: 100%;
+   width: 30%;
+}
+.instrukt{
+   position: absolute;
+   left: 2%;
+   top:21%;
+   width: 30%;
+   height: 50%;
+   box-shadow: 0 0 10px rgba(0,0,0,0.5);
+   background-image: url(../src/assets/images/help.png);
+   background-position: center;
+   background-size: 100% 100%;
+  
+   
+}
+.history{
+   position: absolute;
+   left:2%;
+   top:78%;
+   width: 30%;
+   height: 20%;
+   /*box-shadow: 0 0 10px rgba(0,0,0,0.5);*/
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+#butHistory{
+   height: 40%;
+   width: 60%;
+   font-size: 1.5rem;
+}
+.system{
+   position: absolute;
+   left: 69%;
+   top:21%;
+   width: 30%;
+   height: 50%;
+   box-shadow: 0 0 10px rgba(0,0,0,0.5);
+   display: flex;
+   flex-direction: column;
+   justify-content: space-around;
+   background-size: 100%;
+   background-image: url(assets/images/valute.jpg);
+
+}
+
+#butSave{
+   width: 37%;
+   height: 90%;
+
+}
+.ogrInp{
+   height: 80%;
+   width: 60%;
+}
+
+.btn2 {
+ position: absolute;
+ left: 0.5em;
+ top: 0.5em;
+ width: 3em;
+ height: 3em;
+ border: 0;
+ background: url("https://www.pngarts.com/files/7/Update-Button-PNG-Image.png");
+ background-size: contain;
+ background-repeat: no-repeat;
+ filter: grayscale(1);
+ margin: 10px;
+}
+.btn2:hover {
+ filter: grayscale(.8);
+}
+.btn2:active,
+.btn2:focus {
+ outline: 0;
+}
+.btn2:active{
+ transform: scale(1.02)
+}
+.receipt{
+   position: absolute;
+   left: 35%;
+   top: 10%;
+   width: 30%;
+   height: 50%;
+   display: none;
+   z-index: 5;
+  
+}
+.receiptButton{
+   height: 10%;
+   width: 100%;
+   display: flex;
+   justify-content: flex-end;
+
+}
+.recBut{
+   width: 10%;
+   height: 100%;
+   background-color: #fff;
+}
+.receiptInfo{
+   width: 90%;
+   height: 90%;
+   background-color:pink;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-around;
+   font-size: 25px;
+   z-index: 2;
+   box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+.receiptOperation{
+   display: flex;
+   align-self: center;
+}

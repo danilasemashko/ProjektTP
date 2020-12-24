@@ -1,0 +1,5 @@
+{
+    "port": 5000,
+    "jwtSecret": "danila project",
+    "mongoUri": "mongodb+srv://danila:Donce123@cluster0.pcnn3.mongodb.net/app?retryWrites=true&w=majority"
+}

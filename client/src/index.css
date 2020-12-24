@@ -1,0 +1,132 @@
+html{
+    overflow: hidden;
+}
+.mainDiv {
+    font-family: 'Quicksand', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    background-size: 100%; 
+    background-image: url("assets/images/background.jpg"); 
+    
+   
+  }
+  .mainBlock{
+      box-shadow: 0 0 10px rgba(0,0,0,0.5);
+      width: 30%;
+      height: 80%;
+      border-radius:3%;
+      background-color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+  .logo1{
+      width: 25%;
+      height: 12.5%;
+      align-self: flex-start;
+      background-size: 100%;
+      background-position: center;
+      background-image: url("assets/images/logo.png"); 
+
+  }
+  .content{
+      width: 60%;
+      height: 80%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+  }
+  .mainText{
+      width: 100%;
+      font-weight: 400;
+      font-size: 2em;
+      text-align: center;
+  }
+  .blockInput{
+      width: 100%;
+      height: 13%;
+      border:1px solid;
+      border-radius: 6%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  }
+  .blockInput input{
+      width: 90%;
+      height: 90%;
+      font-size: 1.2em;
+      border: none;
+      outline: none; 
+  }
+  .password{
+      height: 13%;
+      width: 100%;
+      border: 1px solid;
+      border-radius: 6%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  }
+  .password input{
+      height: 90%;
+      width: 90%;
+      font-size: 1.2em;
+      border: none;
+      outline: none; 
+      
+  
+  }
+  #mainButtonIn{
+      height: 99%;
+      width: 76%;
+      background-color: rgb(79, 194, 240);
+      border:none;
+      outline: none;
+      color: white;
+      font-size: 1em;
+  }
+  a{
+      text-decoration: none;
+  }
+  #mainButtonIn:hover{
+  color: black;
+  font-size: 1.2em;
+  }
+  
+  #mainButtonReg{
+      height: 8%;
+      width: 100%;
+      outline: none;
+      background-color: rgb(79, 194, 240);
+      border:none;
+  }
+  .mainButtonIn{
+      height: 8%;
+      width: 100%;
+      display: flex;
+  
+  
+  }
+  .mainButtonIn1{
+      height: 99%;
+      width: 21%;
+      background-color: rgb(79, 194, 240);
+      border-radius: 50% 0 0 50%;
+  }
+  .mainButtonIn2{
+      height: 99%;
+      width: 21%;
+      background-color: rgb(79, 194, 240);
+      border-radius: 0 50% 50% 0;
+  }
+  
+  #mainButtonReg:hover{
+  background-color: rgb(7, 145, 224);
+  transform: scale(1.03);
+  }
+  
