@@ -1,6 +1,4 @@
-html { 
-    overflow:  hidden; 
-}
+
 #toast-container{
    position: absolute;
    left: 80%;
@@ -382,8 +380,8 @@ html {
 
 .btn2 {
  position: absolute;
- left: 0.5em;
- top: 0.5em;
+ left: 33%;
+ top: 21%;
  width: 3em;
  height: 3em;
  border: 0;
@@ -405,9 +403,9 @@ html {
 }
 .receipt{
    position: absolute;
-   left: 35%;
-   top: 10%;
-   width: 30%;
+   left: 25%;
+   top: 25%;
+   width: 50%;
    height: 50%;
    display: none;
    z-index: 5;
@@ -428,15 +426,32 @@ html {
 .receiptInfo{
    width: 90%;
    height: 90%;
-   background-color:pink;
+   background-color:white;
    display: flex;
    flex-direction: column;
    justify-content: space-around;
    font-size: 25px;
    z-index: 2;
-   box-shadow: 0 0 20px rgba(0,0,0,0.5);
+   box-shadow: 0 0 4000px rgba(0,0,0,0.9);
 }
 .receiptOperation{
    display: flex;
    align-self: center;
+}
+.adminHisory{
+   position: absolute;
+   left: 80%;
+   top:90%;
+}
+
+.historyDiv{
+   display: inline-block;
+   border: 2px solid black;
+   width: 22%;
+   margin: 20px;
+}
+.historyMain{
+   width: 100%;
+   height: 100%;
+
 }

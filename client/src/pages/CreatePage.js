@@ -1,14 +1,12 @@
-
+import axios from 'axios';
 import '../create.css'
-import { useHistory } from 'react-router-dom'
+import { useHistory, Link } from 'react-router-dom'
 import { AuthContext } from '../context/AuthContext'
 import React, { useContext, useEffect, useState } from 'react'
 
 
 
 export const CreatePage = () => {
-
-
     const history = useHistory()
     const auth = useContext(AuthContext);
     const [time, setTime] = useState(new Date().toLocaleString());
@@ -29,10 +27,50 @@ export const CreatePage = () => {
     const [sellSelectValue, setSellSelectValue] = useState('USD')
     const [changeOn, setChangeOn] = useState(0)
     const [inpValue, setInpValue] = useState(0)
+    const [test, setTest] = useState();
+    const [userEmail, setUserEmail] = useState('qww')
+
+
 
     function showBlock() {
         if (inpValue < 1000 && inpValue > 0 && changeOn != ('Невыполнимая операция')) {
             document.getElementsByClassName('receipt')[0].style.display = 'block'
+
+
+        }
+    }
+
+    const ajaxRequest = async (user) => {
+        try {
+            const userId = JSON.parse(localStorage.getItem("userData")).userId;
+            const response = await axios.put(`/api/user/exhcange/${userId}`, user);
+            console.log(response);
+        } catch (e) {
+            console.log(e);
+        }
+    }
+
+    const exhcange = async () => {
+        if (inpValue < 1000 && inpValue > 0 && changeOn != ('Невыполнимая операция')) {
+            const userId = JSON.parse(localStorage.getItem("userData")).userId;
+            let user;
+            const response = await axios.get(`/api/user/${userId}`);
+            user = response.data;
+            setUserEmail(user.email);
+            const check = {
+                time: new Date(),
+                currencyFromWhich: buySelectValue,
+                valueFromWhich: inpValue,
+                currencyInWhich: sellSelectValue,
+                valueInWhich: changeOn,
+                email: user.email
+            }
+            let date = new Date().toString()
+            setTest(date.split(' ').splice(0, 5).join(' '))
+
+            user?.receipt.push(check);
+            await ajaxRequest(user);
+            showBlock();
         }
     }
 
@@ -85,6 +123,8 @@ export const CreatePage = () => {
     const sellOnChangeHandler = (e) => {
         setSellSelectValue(e.target.value);
     }
+
+
 
     const inputChangeHandler = (e) => {
         setInpValue(e.target.value);
@@ -249,7 +289,7 @@ export const CreatePage = () => {
             <button className="btn2" onClick={valChange}></button>
             <div className="instrukt"></div>
             <div className="history">
-                <button id="butHistory">Просмотреть историю</button>
+                <Link to="/history" id="butHistory">Просмотреть историю</Link>
             </div>
             <div className="system">  </div>
 
@@ -280,23 +320,25 @@ export const CreatePage = () => {
                 </div>
 
                 <div className="calcBut">
-                    <button className="but1" onClick={showBlock} >Купить</button>
-                    <button className="but2" onClick={showBlock}>Продать</button>
+                    <button className="but1" onClick={exhcange} >Обменять</button>
                 </div>
 
             </div>
             <div className="receipt">
                 <div className="receiptButton">
-                    <button className="recBut" onClick={hideBlock}></button>
+                    <button className="recBut" onClick={hideBlock}>&times;</button>
                 </div>
                 <div className="receiptInfo">
                     <div className="receiptOperation">Операция завершена</div>
-                    <div className="receiptUser">Пользователь:</div>
-                    <div className="receiptDate">Дата и время:{time}</div>
+                    <div className="receiptUser">Пользователь:{userEmail}</div>
+                    <div className="receiptDate">Дата и время:{test}</div>
                     <div className="receiptValuta">Перевод:из {inpValue} {buySelectValue} в {changeOn} {sellSelectValue}</div>
 
                 </div>
 
+            </div>
+            <div className="adminHisory">
+                <Link to="/admin-history">Admin History</Link>
             </div>
         </div>
     )
